@@ -1,0 +1,7 @@
+(defun x (n l)
+  (setf m (*n n))
+  (setf v (+ (random m (make-random-state t)) 1))
+  (cond ((= n (length l))(cond ((= m (apply #'+ l)) l)
+			       (t (x n nil))))
+	((member v l)(x n l))
+	(t (x n (cons v l)))))
